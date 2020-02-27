@@ -7,6 +7,8 @@ use case: query for response
 use case: enter a vessel
 
 -------------
+add vessel | add emergency
+
 ng-rx
 emergency
 	name position
