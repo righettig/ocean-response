@@ -9,7 +9,7 @@ export class EmergenciesMapsComponent {
   title: string = '';
   lat: number = 55.777190;
   lng: number = 3.479711;
-  zoom: number = 5;
+  zoom: number = 6;
 
   markers: Marker[] = [
     {

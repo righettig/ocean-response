@@ -9,7 +9,7 @@ import { P404Component } from './views/error/404.component';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'emergencies-maps', // dashboard
+    redirectTo: 'emergencies/map', // dashboard
     pathMatch: 'full',
   },
   {
