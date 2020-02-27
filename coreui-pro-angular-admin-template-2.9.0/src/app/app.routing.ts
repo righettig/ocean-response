@@ -75,7 +75,7 @@ export const routes: Routes = [
         loadChildren: () => import('./views/forms/forms.module').then(m => m.FormsModule)
       },
       {
-        path: 'google-maps',
+        path: 'emergencies-maps',
         loadChildren: () => import('./views/google-maps/google-maps.module').then(m => m.GoogleMapsModule)
       },
       {
