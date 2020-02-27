@@ -71,6 +71,7 @@
     "rxjs-compat": "^6.5.4",
     "simple-line-icons": "^2.4.1",
     "spinkit": "^1.2.5",
+    "subsink": "^1.0.1",
     "ts-helpers": "^1.1.2",
     "tslib": "^1.10.0",
     "web-animations-js": "^2.3.2",

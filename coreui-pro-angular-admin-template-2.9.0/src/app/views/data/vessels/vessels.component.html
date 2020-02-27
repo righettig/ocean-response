@@ -15,10 +15,17 @@
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-md-3 col-form-label" for="hf-position">Position</label>
+              <label class="col-md-3 col-form-label" for="hf-position">Position.Lat</label>
               <div class="col-md-9">
-                <input type="text" id="hf-position" name="hf-position" class="form-control" placeholder="Enter Vessel Position.."
-                       [(ngModel)]="vessel.position">
+                <input type="text" id="hf-position" name="hf-position" class="form-control" placeholder="Enter Vessel Latitude.."
+                       [(ngModel)]="vessel.lat">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label" for="hf-position">Position.Lng</label>
+              <div class="col-md-9">
+                <input type="text" id="hf-position" name="hf-position" class="form-control" placeholder="Enter Vessel Longitude.."
+                       [(ngModel)]="vessel.lng">
               </div>
             </div>
             <div class="form-group row">
@@ -46,7 +53,8 @@
             <thead>
               <tr>
                 <th>Name</th>
-                <th>Position</th>
+                <th>Lat</th>
+                <th>Lng</th>
                 <th>Size</th>
                 <th>Status</th>
               </tr>
@@ -54,7 +62,8 @@
             <tbody>
               <tr *ngFor="let v of vessels">
                 <td>{{v.name}}</td>
-                <td>{{v.position}}</td>
+                <td>{{v.lat}}</td>
+                <td>{{v.lng}}</td>
                 <td>{{v.size}}</td>
                 <td>
                   <span class="badge badge-success">Active</span>

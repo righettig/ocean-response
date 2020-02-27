@@ -4,14 +4,16 @@ var app = module.exports = express();
 let vesselsData = [
   { 
     id: 1, 
-    name: "Tiny Vessel", 
-    position: "pos1", 
+    name: "Tiny Vessel",  
+    lat: 58.277190,
+    lng: -0.779711,
     size: 5 
   },
   { 
     id: 2,
     name: "Big Vessel", 
-    position: "pos2", 
+    lat: 58.277190,
+    lng: -0.779711,
     size: 50 
   }
 ]

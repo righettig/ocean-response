@@ -7,18 +7,21 @@ let emergenciesData = [
     name: "Little Hiccup",
     lat: 58.277190,
     lng: -0.779711,
+    size: 5
   },
   { 
     id: 2, 
     name: "Huge Disaster",
     lat: 53.777190,
-    lng: 3.479711
+    lng: 3.479711,
+    size: 50
   },
   { 
     id: 3, 
     name: "Doomsday Disaster",
     lat: 57.077190,
-    lng: 5.479711
+    lng: 5.479711,
+    size: 500
   }
 ]
 
