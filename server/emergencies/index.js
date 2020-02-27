@@ -25,6 +25,8 @@ let emergenciesData = [
   }
 ]
 
+module.exports.emergencies = emergenciesData;
+
 app.get("/api/emergencies", function (req, res) {
   console.log("GET emergencies");
 

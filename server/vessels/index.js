@@ -18,6 +18,8 @@ let vesselsData = [
   }
 ]
 
+module.exports.vessels = vesselsData;
+
 app.get("/api/vessels", function (req, res) {
   console.log("GET vessels");
 
