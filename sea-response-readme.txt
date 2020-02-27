@@ -1,9 +1,4 @@
-2) Use case: query for response
-	search: response-radius
-
-tabs, switches
-
-1) Use Cypress
+TODO: Use Cypress
 
 //  Fake data
 //=============

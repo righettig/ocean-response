@@ -17,25 +17,37 @@
             <div class="form-row">
               <div class="form-group col-md-4">
                 <label for="emergency">Emergency</label>
-                <select class="form-control" id="emergency">
-                  <option>Default select</option>
+                <select class="form-control" id="emergency" [(ngModel)]="emergency">
+                  <option *ngFor="let e of emergencies">{{e.name}}</option>
                 </select>
               </div>
               <div class="form-group col-md-4">
-                <label for="responseRadius" style="margin-bottom: 16px;">Response Radius (<span>56</span>)</label>
-                <input type="range" class="form-control-range" id="responseRadius">
+                <label for="responseRadius" style="margin-bottom: 16px;">
+                  Response Radius (<span>{{responseRadius}}</span>)
+                </label>
+                <input type="range" class="form-control-range" 
+                       id="responseRadius" 
+                       name="responseRadius"
+                       [(ngModel)]="responseRadius">
               </div>
               <div class="form-group col-md-4">
-                <label for="positionsReceivedInLast" style="margin-bottom: 16px;">Positions Received in Last (<span>56</span>)</label>
-                <input type="range" class="form-control-range" id="positionsReceivedInLast">
+                <label for="positionsReceivedInLast" style="margin-bottom: 16px;">
+                  Positions Received in Last (<span>{{positionsReceivedInLast}}</span>)
+                </label>
+                <input type="range" class="form-control-range" 
+                       id="positionsReceivedInLast"
+                       name="positionsReceivedInLast"
+                       [(ngModel)]="positionsReceivedInLast">
               </div>
             </div>
+            <button type="button" class="btn btn-primary" (click)="search()">Submit</button>
           </form>
         </div>
       </div>
     </div>
 
     <div class="col-md-3">
+      <!-- TODO: refactor into a separate component -->
       <div class="brand-card">
         <div class="brand-card-header bg-twitter">
           <i class="fa fa-ship"></i>
@@ -61,51 +73,17 @@
               <tr>
                 <th>Vessel</th>
                 <th>Distance</th>
-                <th>Role</th>
                 <th>Status</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Samppa Nori</td>
-                <td>2012/01/01</td>
-                <td>Member</td>
+              <tr *ngFor="let av of availableVessels">
+                <td>{{av.name}}</td>
+                <td>20</td>
                 <td>
                   <span class="badge badge-success">Active</span>
                 </td>
               </tr>
-              <tr>
-                <td>Estavan Lykos</td>
-                <td>2012/02/01</td>
-                <td>Staff</td>
-                <td>
-                  <span class="badge badge-danger">Banned</span>
-                </td>
-              </tr>
-              <!-- <tr>
-                <td>Chetan Mohamed</td>
-                <td>2012/02/01</td>
-                <td>Admin</td>
-                <td>
-                  <span class="badge badge-secondary">Inactive</span>
-                </td>
-              </tr>
-              <tr>
-                <td>Derick Maximinus</td>
-                <td>2012/03/01</td>
-                <td>Member</td>
-                <td>
-                  <span class="badge badge-warning">Pending</span>
-                </td>
-              </tr>
-              <tr>
-                <td>Friderik Dávid</td>
-                <td>2012/01/21</td>
-                <td>Staff</td>
-                <td>
-                  <span class="badge badge-success">Active</span>
-                </td>
-              </tr> -->
             </tbody>
           </table>
           <ul class="pagination">
@@ -113,9 +91,6 @@
             <li class="page-item active">
               <a class="page-link" href="#">1</a>
             </li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">4</a></li>
             <li class="page-item"><a class="page-link" href="#">Next</a></li>
           </ul>
 

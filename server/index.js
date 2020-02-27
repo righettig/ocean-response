@@ -25,5 +25,11 @@ var emergencies = require('./emergencies');
 app.use(emergencies);
 
 
+// Search
+//-------------
+var emergencies = require('./search');
+app.use(emergencies);
+
+
 app.listen("3120");
 console.log("Listening on localhost:3120");
