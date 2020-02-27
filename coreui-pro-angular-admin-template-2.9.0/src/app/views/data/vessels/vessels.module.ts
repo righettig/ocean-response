@@ -5,13 +5,13 @@ import { FormsModule } from '@angular/forms';
 import { VesselsRoutingModule } from './vessels-routing.module';
 
 import { VesselsComponent } from './vessels.component';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   imports: [
     VesselsRoutingModule,
-    BsDropdownModule.forRoot(),
+    CommonModule,
     FormsModule,
     CollapseModule.forRoot(),
   ],
