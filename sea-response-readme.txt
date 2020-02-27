@@ -1,26 +1,17 @@
-OK CoreUI
-OK Sea/Response
-
-Cypress
-
-use case: query for response
-use case: enter a vessel
-
--------------
-add vessel | add emergency
-
-ng-rx
-emergency
-	name position
-
-ng-rx-data	
-vessel
-	position
-	vessel size, deck space
-	
-search: response-radius
+2) Use case: query for response
+	search: response-radius
 
 tabs, switches
 
+1) Use Cypress
+
+//  Fake data
+//=============
+
+// New Emergency
+55.167190
+3.779711
+
+// New vessel
 55.167190
 3.779711
