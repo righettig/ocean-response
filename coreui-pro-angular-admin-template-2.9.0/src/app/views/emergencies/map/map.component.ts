@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: 'emergencies-maps.component.html',
-  styleUrls: ['emergencies-maps.component.css'],
+  templateUrl: 'map.component.html',
+  styleUrls: ['map.component.css'],
 })
 export class EmergenciesMapsComponent {
   title: string = '';

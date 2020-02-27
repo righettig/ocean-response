@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { AgmCoreModule } from '@agm/core';
-import { EmergenciesMapsComponent } from './emergencies-maps.component';
-import { EmergenciesMapsRoutingModule } from './emergencies-maps-routing.module';
+import { EmergenciesMapsRoutingModule } from './map-routing.module';
+import { EmergenciesMapsComponent } from './map.component';
 
 @NgModule({
   imports: [

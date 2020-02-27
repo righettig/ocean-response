@@ -27,10 +27,6 @@ export const routes: Routes = [
     },
     children: [
       {
-        path: 'base',
-        loadChildren: () => import('./views/base/base.module').then(m => m.BaseModule)
-      },
-      {
         path: 'dashboard',
         loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule)
       },
@@ -39,8 +35,8 @@ export const routes: Routes = [
         loadChildren: () => import('./views/data/data.module').then(m => m.DataModule)
       },
       {
-        path: 'emergencies-maps',
-        loadChildren: () => import('./views/emergencies-maps/emergencies-maps.module').then(m => m.EmergenciesMapsModule)
+        path: 'emergencies',
+        loadChildren: () => import('./views/emergencies/emergencies.module').then(m => m.EmergenciesModule)
       }
     ]
   },

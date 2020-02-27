@@ -33,7 +33,7 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Map',
-    url: '/emergencies-maps',
+    url: '/emergencies/map',
     icon: 'icon-map',
     badge: {
       variant: 'danger',
@@ -42,7 +42,7 @@ export const navItems: INavData[] = [
   },
   {
     name: 'List',
-    url: '/base/tabs',
+    url: '/emergencies/list',
     icon: 'icon-puzzle'
   }
 ];
