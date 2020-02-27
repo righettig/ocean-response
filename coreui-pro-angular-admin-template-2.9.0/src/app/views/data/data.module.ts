@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 // Routing
-import { FormsRoutingModule } from './forms-routing.module';
+import { DataRoutingModule } from './data-routing.module';
 
 @NgModule({
   imports: [
-    FormsRoutingModule
+    DataRoutingModule
   ],
   declarations: []
 })
-export class FormsModule { }
+export class DataModule { }

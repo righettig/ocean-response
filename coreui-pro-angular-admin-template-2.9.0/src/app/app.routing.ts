@@ -35,8 +35,8 @@ export const routes: Routes = [
         loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule)
       },
       {
-        path: 'forms',
-        loadChildren: () => import('./views/forms/forms.module').then(m => m.FormsModule)
+        path: 'data',
+        loadChildren: () => import('./views/data/data.module').then(m => m.DataModule)
       },
       {
         path: 'emergencies-maps',

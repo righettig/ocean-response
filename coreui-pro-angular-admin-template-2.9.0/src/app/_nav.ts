@@ -16,12 +16,12 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Vessels',
-    url: '/forms/vessels',
+    url: '/data/vessels',
     icon: 'icon-note'
   },
   {
     name: 'Emergencies',
-    url: '/forms/emergencies',
+    url: '/data/emergencies',
     icon: 'icon-note'
   },
   {
