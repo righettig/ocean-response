@@ -1,6 +1,56 @@
 <div class="animated fadeIn">
   <div class="row">
+    <div class="col-md-9">
+      <div class="card card-accent-info mb-3">
+        <div class="card-header d-flex pb-0">
+          <div>Search Parameters</div>
+          <div class="ml-auto">
+            <label class="switch switch-pill switch-success">
+              <input type="checkbox" class="switch-input" checked>
+              <span class="switch-slider"></span>
+              <!-- Show Distances -->
+            </label>
+          </div>
+        </div>
+        <div class="card-body text-info">
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="emergency">Emergency</label>
+                <select class="form-control" id="emergency">
+                  <option>Default select</option>
+                </select>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="responseRadius" style="margin-bottom: 16px;">Response Radius (<span>56</span>)</label>
+                <input type="range" class="form-control-range" id="responseRadius">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="positionsReceivedInLast" style="margin-bottom: 16px;">Positions Received in Last (<span>56</span>)</label>
+                <input type="range" class="form-control-range" id="positionsReceivedInLast">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
+    <div class="col-md-3">
+      <div class="brand-card">
+        <div class="brand-card-header bg-twitter">
+          <i class="fa fa-twitter"></i>
+        </div>
+        <div class="brand-card-body">
+          <div>
+            <div class="text-value">2</div>
+            <div class="text-uppercase text-muted small">vessels found</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
     <div class="col-md-12">
       <tabset>
         <tab>
@@ -32,7 +82,7 @@
                   <span class="badge badge-danger">Banned</span>
                 </td>
               </tr>
-              <tr>
+              <!-- <tr>
                 <td>Chetan Mohamed</td>
                 <td>2012/02/01</td>
                 <td>Admin</td>
@@ -55,7 +105,7 @@
                 <td>
                   <span class="badge badge-success">Active</span>
                 </td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
           <ul class="pagination">
@@ -88,6 +138,5 @@
         </tab>
       </tabset>
     </div>
-
   </div>
 </div>
