@@ -6,32 +6,32 @@
           <strong>Vessels</strong> New
         </div>
         <div class="card-body">
-          <form action="" method="post" class="form-horizontal">
+          <form #f="ngForm" novalidate class="form-horizontal">
             <div class="form-group row">
               <label class="col-md-3 col-form-label" for="hf-name">Name</label>
               <div class="col-md-9">
-                <input type="text" id="hf-name" name="hf-name" class="form-control" placeholder="Enter Vessel Name..">
-                <!-- <span class="help-block">Please enter vessel name</span> -->
+                <input type="text" id="hf-name" name="hf-name" class="form-control" placeholder="Enter Vessel Name.."
+                       [(ngModel)]="vessel.name">
               </div>
             </div>
             <div class="form-group row">
               <label class="col-md-3 col-form-label" for="hf-position">Position</label>
               <div class="col-md-9">
-                <input type="text" id="hf-position" name="hf-position" class="form-control" placeholder="Enter Vessel Position..">
-                <!-- <span class="help-block">Please enter vessel position</span> -->
+                <input type="text" id="hf-position" name="hf-position" class="form-control" placeholder="Enter Vessel Position.."
+                       [(ngModel)]="vessel.position">
               </div>
             </div>
             <div class="form-group row">
               <label class="col-md-3 col-form-label" for="hf-size">Size</label>
               <div class="col-md-9">
-                <input type="number" id="hf-size" name="hf-size" class="form-control" placeholder="Enter Vessel Size..">
-                <!-- <span class="help-block">Please enter vessel size</span> -->
+                <input type="number" id="hf-size" name="hf-size" class="form-control" placeholder="Enter Vessel Size.."
+                       [(ngModel)]="vessel.size">
               </div>
             </div>
           </form>
         </div>
         <div class="card-footer">
-          <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+          <button type="submit" class="btn btn-sm btn-primary" (click)="save()"><i class="fa fa-dot-circle-o"></i> Submit</button>
           <!-- <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button> -->
         </div>
       </div>
