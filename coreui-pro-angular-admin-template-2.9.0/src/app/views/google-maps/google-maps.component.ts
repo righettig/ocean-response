@@ -7,42 +7,34 @@ import { Component } from '@angular/core';
 })
 export class GoogleMapsComponent {
   title: string = '';
-  lat: number = 37.431489;
-  lng: number = -122.163719;
-  zoom: number = 11;
+  lat: number = 55.777190;
+  lng: number = 3.479711;
+  zoom: number = 5;
 
   markers: Marker[] = [
     {
-      lat: 37.431489,
-      lng: -122.163719,
-      label: 'S',
-      draggable: false,
-      title: 'Stanford',
-      www: 'https://www.stanford.edu/'
-    },
-    {
-      lat: 37.394694,
-      lng: -122.150333,
-      label: 'T',
-      draggable: false,
-      title: 'Tesla',
-      www: 'https://www.tesla.com/'
-    },
-    {
-      lat: 37.331681,
-      lng: -122.030100,
+      lat: 58.277190,
+      lng: -0.779711,
       label: 'A',
       draggable: false,
-      title: 'Apple',
-      www: 'https://www.apple.com/'
+      title: 'Emergency 1',
+      www: 'https:/sea.live'
     },
     {
-      lat: 37.484722,
-      lng: -122.148333,
-      label: 'F',
+      lat: 53.777190,
+      lng: 3.479711,
+      label: 'B',
       draggable: false,
-      title: 'Facebook',
-      www: 'https://www.facebook.com/'
+      title: 'Emergency 2',
+      www: 'https:/sea.live'
+    },
+    {
+      lat: 57.077190,
+      lng: 5.479711,
+      label: 'C',
+      draggable: false,
+      title: 'Emergency 3',
+      www: 'https:/sea.live'
     }
   ];
 }

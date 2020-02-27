@@ -1,12 +1,10 @@
-CoreUI
-
-Sea/Response
+OK CoreUI
+OK Sea/Response
 
 NgRx
 NgRx-data
 
 Cypress
-
 
 use case: query for response
 use case: enter a vessel
@@ -20,3 +18,5 @@ vessel
 	vessel size, deck space
 	
 search: response-radius
+
+tabs, switches
