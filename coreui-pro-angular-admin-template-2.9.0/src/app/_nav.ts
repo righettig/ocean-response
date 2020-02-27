@@ -21,7 +21,7 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Emergencies',
-    url: '/forms/basic-forms',
+    url: '/forms/emergencies',
     icon: 'icon-note'
   },
   {

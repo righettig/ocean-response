@@ -11,6 +11,10 @@ const routes: Routes = [
       {
         path: 'basic-forms',
         loadChildren: () => import('./basic-forms/basic-forms.module').then(m => m.BasicFormsModule)
+      },
+      {
+        path: 'emergencies',
+        loadChildren: () => import('./emergencies/emergencies.module').then(m => m.EmergenciesModule)
       }
     ]
   }
