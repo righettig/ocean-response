@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '../../../../environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class SearchService {
@@ -8,7 +9,7 @@ export class SearchService {
   }
 
   search(emergencyId: number, responseRadius: number, positionsReceivedInLast: number) {
-    return this.http.get("http://localhost:3120/api/search",
+    return this.http.get(environment.SEARCH_URL,
       {
         params: {
           emergencyId: emergencyId.toString(),
