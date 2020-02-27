@@ -9,10 +9,10 @@ const routes: Routes = [
       title: 'Tables'
     },
     children: [
-      {
-        path: 'datatable',
-        loadChildren: () => import('./datatable/datatable.module').then(m => m.DatatableInitModule)
-      },
+      // {
+      //   path: 'datatable',
+      //   loadChildren: () => import('./datatable/datatable.module').then(m => m.DatatableInitModule)
+      // },
       {
         path: 'tables',
         component: TablesComponent,

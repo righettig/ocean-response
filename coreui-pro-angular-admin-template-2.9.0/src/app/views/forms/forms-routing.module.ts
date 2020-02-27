@@ -12,14 +12,14 @@ const routes: Routes = [
         path: 'basic-forms',
         loadChildren: () => import('./basic-forms/basic-forms.module').then(m => m.BasicFormsModule)
       },
-      {
-        path: 'advanced-forms',
-        loadChildren: () => import('./advanced-forms/advanced-forms.module').then(m => m.AdvancedFormsModule)
-      },
-      {
-        path: 'validation-forms',
-        loadChildren: () => import('./validation-forms/validation-forms.module').then(m => m.ValidationFormsModule)
-      }
+      // {
+      //   path: 'advanced-forms',
+      //   loadChildren: () => import('./advanced-forms/advanced-forms.module').then(m => m.AdvancedFormsModule)
+      // },
+      // {
+      //   path: 'validation-forms',
+      //   loadChildren: () => import('./validation-forms/validation-forms.module').then(m => m.ValidationFormsModule)
+      // }
     ]
   }
 ];
