@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { GoogleMapsComponent } from './google-maps.component';
+import { EmergenciesMapsComponent } from './emergencies-maps.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: GoogleMapsComponent,
+    component: EmergenciesMapsComponent,
     data: {
       title: 'Emergencies Map'
     }
@@ -17,4 +17,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class GoogleMapsRoutingModule {}
+export class EmergenciesMapsRoutingModule {}

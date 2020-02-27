@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: 'google-maps.component.html',
-  styleUrls: ['google-maps.component.css'],
+  templateUrl: 'emergencies-maps.component.html',
+  styleUrls: ['emergencies-maps.component.css'],
 })
-export class GoogleMapsComponent {
+export class EmergenciesMapsComponent {
   title: string = '';
   lat: number = 55.777190;
   lng: number = 3.479711;
