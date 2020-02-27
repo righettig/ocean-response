@@ -57,6 +57,7 @@
                 <th>Lng</th>
                 <th>Size</th>
                 <th>Status</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -67,6 +68,11 @@
                 <td>{{e.size}}</td>
                 <td>
                   <span class="badge badge-success">Active</span>
+                </td>
+                <td>
+                  <button type="button" class="btn btn-sm btn-danger" (click)="delete(e)">
+                    Delete
+                  </button>
                 </td>
               </tr>
             </tbody>

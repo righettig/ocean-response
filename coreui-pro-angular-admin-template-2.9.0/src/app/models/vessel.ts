@@ -1,6 +1,7 @@
 export interface Vessel {
   id: number;
   name: string;
-  position: string;
+  lat: number;
+  lng: number;
   size: number;
 }

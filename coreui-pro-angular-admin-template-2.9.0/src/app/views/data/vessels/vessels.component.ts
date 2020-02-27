@@ -46,6 +46,10 @@ export class VesselsComponent {
     })
   }
 
+  delete(vessel: Vessel) {
+    this.vesselService.delete(vessel);
+  }
+
   reset() {
     this.vessel = { name: "", position: "", size: 0 };
   }

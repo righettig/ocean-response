@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { EmergencyService } from '../../../store/emergency.service';
+import { Observable } from 'rxjs';
+import { Vessel } from '../../../models/vessel';
+import { SubSink } from 'subsink';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +10,50 @@ import { Component } from '@angular/core';
   styleUrls: ['map.component.css'],
 })
 export class EmergenciesMapsComponent {
+
+  constructor(private emergencyService: EmergencyService) {
+    this.emergencies$ = emergencyService.entities$;
+    //this.loading$ = emergencyService.loading$;
+  }
+
+  ngOnInit() {
+    this.getEmergencies();
+
+    this.subs.sink = this.emergencies$.subscribe(data => {
+      debugger;
+      this.markers = data.map(el => {
+        return {
+          lat: el.lat,
+          lng: el.lng,
+          label: el.name[0].toUpperCase(),
+          draggable: false,
+          title: el.name,
+          www: 'https:/sea.live'
+        }
+      });
+    })
+
+    // this.subs.sink = this.loading$.subscribe(data => {
+    //   if (data) {
+    //     this.loadingBar.start();
+    //   } else {
+    //     this.loadingBar.stop();
+    //   }
+    // })
+  }
+
+  ngOnDestroy() {
+    this.subs.unsubscribe();
+  }
+
+  getEmergencies() {
+    // TODO: the server should only return the items belonging to the current user
+    this.emergencyService.getAll();
+  }
+
+  emergencies$: Observable<Vessel[]>;
+  loading$: Observable<boolean>;
+
   title: string = '';
   lat: number = 55.777190;
   lng: number = 3.479711;
@@ -37,6 +85,9 @@ export class EmergenciesMapsComponent {
       www: 'https:/sea.live'
     }
   ];
+
+  private subs = new SubSink();
+
 }
 
 // just an interface for type safety.
