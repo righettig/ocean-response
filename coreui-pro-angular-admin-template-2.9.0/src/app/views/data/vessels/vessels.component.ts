@@ -14,7 +14,6 @@ export class VesselsComponent {
   
   constructor(private vesselService: VesselService) {     
     this.vessels$ = vesselService.entities$;
-    //this.loading$ = vesselService.loading$;
   }
 
   ngOnInit() {
@@ -23,17 +22,8 @@ export class VesselsComponent {
     this.getVessels();
 
     this.subs.sink = this.vessels$.subscribe(data => {
-      debugger;
       this.vessels = data;
     })
-
-    // this.subs.sink = this.loading$.subscribe(data => {
-    //   if (data) {
-    //     this.loadingBar.start();
-    //   } else {
-    //     this.loadingBar.stop();
-    //   }
-    // })
   }
 
   ngOnDestroy() {
@@ -61,10 +51,10 @@ export class VesselsComponent {
 
   vessels$: Observable<Vessel[]>;
   loading$: Observable<boolean>;
- 
-  private subs = new SubSink();
 
   vessels = [];
   vessel;
+ 
+  private subs = new SubSink();
 
 }

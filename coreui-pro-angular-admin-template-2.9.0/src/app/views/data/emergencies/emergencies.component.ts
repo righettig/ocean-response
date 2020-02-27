@@ -2,7 +2,6 @@ import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { EmergencyService } from '../../../store/emergency.service';
 import { Observable } from 'rxjs';
-import { Vessel } from '../../../models/vessel';
 import { SubSink } from 'subsink';
 import { Emergency } from '../../../models/emergency';
 
@@ -15,7 +14,6 @@ export class EmergenciesComponent {
   
   constructor(private emergencyService: EmergencyService) {
     this.emergencies$ = emergencyService.entities$;
-    //this.loading$ = emergencyService.loading$;
   }
 
   ngOnInit() {
@@ -24,17 +22,8 @@ export class EmergenciesComponent {
     this.getEmergencies();
 
     this.subs.sink = this.emergencies$.subscribe(data => {
-      debugger;
       this.emergencies = data;
     })
-
-    // this.subs.sink = this.loading$.subscribe(data => {
-    //   if (data) {
-    //     this.loadingBar.start();
-    //   } else {
-    //     this.loadingBar.stop();
-    //   }
-    // })
   }
 
   ngOnDestroy() {
@@ -63,9 +52,9 @@ export class EmergenciesComponent {
   emergencies$: Observable<Emergency[]>;
   loading$: Observable<boolean>;
  
-  private subs = new SubSink();
-
   emergencies = [];
   emergency;
+
+  private subs = new SubSink();
 
 }
