@@ -41,10 +41,6 @@ export const routes: Routes = [
       {
         path: 'emergencies-maps',
         loadChildren: () => import('./views/google-maps/google-maps.module').then(m => m.GoogleMapsModule)
-      },
-      {
-        path: 'tables',
-        loadChildren: () => import('./views/tables/tables.module').then(m => m.TablesModule)
       }
     ]
   },
