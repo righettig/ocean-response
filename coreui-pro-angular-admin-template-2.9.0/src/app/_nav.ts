@@ -16,7 +16,7 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Vessels',
-    url: '/forms/basic-forms',
+    url: '/forms/vessels',
     icon: 'icon-note'
   },
   {

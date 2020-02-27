@@ -2,21 +2,21 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 // Routing
-import { BasicFormsRoutingModule } from './basic-forms-routing.module';
+import { VesselsRoutingModule } from './vessels-routing.module';
 
-import { BasicFormsComponent } from './basic-forms.component';
+import { VesselsComponent } from './vessels.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 
 @NgModule({
   imports: [
-    BasicFormsRoutingModule,
+    VesselsRoutingModule,
     BsDropdownModule.forRoot(),
     FormsModule,
     CollapseModule.forRoot(),
   ],
   declarations: [
-    BasicFormsComponent
+    VesselsComponent
   ]
 })
-export class BasicFormsModule { }
+export class VesselsModule { }

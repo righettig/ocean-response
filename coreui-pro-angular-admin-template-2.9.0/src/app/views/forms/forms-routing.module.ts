@@ -9,8 +9,8 @@ const routes: Routes = [
     },
     children: [
       {
-        path: 'basic-forms',
-        loadChildren: () => import('./basic-forms/basic-forms.module').then(m => m.BasicFormsModule)
+        path: 'vessels',
+        loadChildren: () => import('./vessels/vessels.module').then(m => m.VesselsModule)
       },
       {
         path: 'emergencies',
